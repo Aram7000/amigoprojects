@@ -1,0 +1,283 @@
+body {
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+body #layer1 {
+    background-image: linear-gradient(45deg, #333344 15%, #6644ff, #cc44ff, #333344 90%);
+    animation: body-background 14s infinite;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    height: 100vh;
+    width: 800vw;
+    left: -700vw;
+    z-index: 1;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body #layer2 {
+    background-image: url("./assets/background.png");
+    background-repeat: repeat;
+    background-size: 512px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+}
+
+header {
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 5000;
+    padding: 10px;
+    height: 50px;
+    width: 100vw;
+    left: 0;
+    top: 0;
+}
+
+header p.Heading {
+    background: linear-gradient(45deg, #cc44ff 33%, #6644ff 66%, #8AA9D6);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: cursive;
+    color: #6644ff;
+    font-size: 180%;
+    margin: 0 auto;
+}
+
+main {
+    padding-bottom: 0 !important;
+    height: calc(100vh - 50px);
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    z-index: 4999;
+    width: 100%;
+    top: 50px;
+    left: 0;
+}
+
+main .content {
+    min-height: 100vh;
+    width: 100%;
+}
+
+main::-webkit-scrollbar {
+    width: 15px;
+}
+
+main::-webkit-scrollbar-track {
+    background-color: #33334499;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(#6644ff99, #cc44ff99);
+    border: 3px solid #333344;
+    backdrop-filter: blur(2px);
+    transition-duration: 0.2s;
+    background-size: 200%;
+    opacity: 0.5;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(#6644ff, #cc44ff);
+}
+
+footer {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #333f44;
+    color: #ffffff;
+    padding: 20px;
+    height: 100px;
+    width: 100vw;
+}
+
+#Menu_Button {
+    background-color: transparent;
+    transition-duration: 0.5s;
+    position: absolute;
+}
+
+#Menu_Button:hover #NEON_icon {
+    transform: rotate(25deg) scale(1.15);
+}
+
+#Menu_Button:active #NEON_icon {
+    transition-duration: 0.1s;
+    transform: rotate(-15deg) scale(0.95);
+}
+
+#Menu_Button.opened menu {
+    animation: openMenu 0.7s;
+    animation-fill-mode: forwards;
+}
+
+#Menu_Button.closed menu {
+    animation: closeMenu 0.7s;
+    animation-fill-mode: forwards;
+}
+
+#Menu_Button menu {
+    justify-content: space-between;
+    transition-duration: 0.5s;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    z-index: 5001;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 0;
+    width: 0;
+    left: 0;
+    top: 0;
+}
+
+#NEON_icon {
+    background-image: url("./Neon(c)/Logo/512.jpg");
+    background-color: transparent;
+    transition-duration: 0.2s;
+    background-size: contain;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+}
+
+#Menu_Button menu .menu-i {
+    background-color: transparent;
+    transition-duration: 0.2s;
+    padding: 10px 20px;
+    color: #eeeeee;
+    text-align: left;
+    width: 100%;
+}
+
+#Menu_Button menu .menu-i:hover {
+    background-color: #404f4f;
+    color: #ffffff;
+}
+
+#instagram {
+    background-image: url("./assets/instagram_logo.png");
+    background-color: #cc44ff;
+    transition-duration: 0.2s;
+    background-size: contain;
+    border-radius: 50%;
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+#instagram:hover {
+    background-color: #eeeeee;
+}
+
+#facebook {
+    background-image: url("./assets/facebook_logo.png");
+    background-color: #6644ff;
+    transition-duration: 0.2s;
+    background-size: contain;
+    border-radius: 50%;
+    display: block;
+    height: 27px;
+    width: 27px;
+}
+
+#facebook:hover {
+    background-color: #eeeeee;
+}
+
+@keyframes body-background {
+    0% {
+        background-position-x: 0vw;
+    }
+    50% {
+        background-position-x: 700vw;
+    }
+    100% {
+        background-position-x: 0vw;
+    }
+}
+
+@keyframes openMenu {
+    0% {
+        width: 0px;
+        height: 0vh;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+    }
+    20% {
+        width: 300px;
+        height: 10vh;
+    }
+    50% {
+        padding: 10px;
+        height: calc(100vh - 50px);
+    }
+    90% {
+        top: 50px;
+    }
+    100% {
+        top: 50px;
+        padding: 10px;
+        width: 300px;
+        height: calc(100vh - 50px);
+        background-color: #333f44ef;
+    }
+}
+
+@keyframes closeMenu {
+    0% {
+        top: 50px;
+        padding: 10px;
+        width: 300px;
+        height: 100vh;
+        background-color: #333f44ef;
+    }
+    10% {
+        top: 0;
+    }
+    20% {
+        padding: 10px;
+        height: 100vh;
+    }
+    50% {
+        width: 300px;
+        height: 10vh;
+    }
+    100% {
+        width: 0px;
+        height: 0vh;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #layer1 {
+        background-color: #333344;
+        background-image: linear-gradient(45deg, #333344 15%, #6644ff, #cc44ff, #333344 90%);
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+    }
+}

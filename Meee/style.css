@@ -1,0 +1,467 @@
+/* ALL */
+::selection {
+    background: #5500ff;
+    color: #ffffff;
+}
+
+
+/* >= 500 */
+
+@media only screen and (min-width: 500px) {
+    footer#login {
+        background-color: #111111;
+        padding: 10px;
+        height: 70px;
+    }
+    main#login {
+        background-image: linear-gradient(135deg, #221133, #110033);
+        box-shadow: inset 0 0 20px 0px #000000;
+        height: calc(100vh - 70px);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+    }
+    form#login {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        width: 400px;
+    }
+    form#login input {
+        border-radius: 0px 10px 10px 10px;
+        background-color: #ffffff;
+        border: 1px solid #acacac;
+        color: #221133;
+        font-size: 120%;
+        padding: 10px;
+        margin: 5px;
+        width: 100%;
+    }
+    form#login input:focus {
+        border: 2px solid #221133;
+    }
+    form#login input::placeholder {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-image: linear-gradient(45deg, #221133, #110033);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-size: 90%;
+    }
+    form#login input[type=submit]:disabled {
+        background-image: linear-gradient(45deg, #554466, #443366);
+        border-radius: 10px;
+        color: #acacac;
+        border: none;
+        cursor: unset;
+    }
+    form#login input[type=submit] {
+        background-image: linear-gradient(45deg, #660077, #330066);
+        transition-duration: 0.5s;
+        border-radius: 10px;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+    }
+    div#or {
+        margin: 10px;
+        position: relative;
+    }
+    div#or hr {
+        border-color: #221133;
+    }
+    p#or {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        border-width: 0 2px 0 2px;
+        border-color: #221133;
+        border-style: solid;
+        border-radius: 5px;
+        position: absolute;
+        color: #221133;
+        padding: 0 8px;
+        left: 50%;
+    }
+    a#hnac {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-image: linear-gradient(45deg, #003399, #006699);
+        margin: 20px auto 0 auto;
+        border-radius: 10px;
+        text-align: center;
+        width: max-content;
+        color: #ffffff;
+        display: block;
+        padding: 10px 15px;
+    }
+    h1#login {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #220033;
+    }
+    header {
+        background-image: linear-gradient(45deg, #442266, #220066);
+        padding: 20px;
+        height: 70px;
+        width: 100%;
+    }
+    footer {
+        background-image: linear-gradient(45deg, #221133, #110033);
+        padding: 20px;
+        height: 70px;
+        width: 100%;
+    }
+    main#profile {
+        box-shadow: inset 0 0 10px #000000;
+        background-color: #333333;
+        height: calc(100vh - 140px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 5vw;
+    }
+    header #rightSide #userImage {
+        background-position: center;
+        background-size: cover;
+        border-radius: 40%;
+        display: block;
+        margin: 10px;
+        height: 50px;
+        width: 50px;
+    }
+    header #rightSide #Nickname {
+        font-family: cursive;
+        color: #ffffff;
+        font-size: 130%;
+    }
+    button#menu {
+        background-image: linear-gradient( #ffffff 20%, transparent 20%, transparent 40%, #ffffff 40%, #ffffff 60%, transparent 60%, transparent 80%, #ffffff 80%);
+        background-color: transparent;
+        transition-duration: 0.1s;
+        border-radius: 6px;
+        cursor: pointer;
+        display: block;
+        height: 30px;
+        margin: 5px;
+        width: 30px;
+    }
+    button#menu:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px 0 #8855ff;
+    }
+    button#menu.activetrue {
+        transform: rotate(90deg);
+    }
+    div.card {
+        background-image: linear-gradient(45deg, #333344, #443366);
+        box-shadow: 0 0 10px 0 #000000;
+        padding: 10px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    menu#profile {
+        background-image: linear-gradient(45deg, #003399, #006699);
+        box-shadow: 0 0 20px 0 #000000;
+        transition-duration: 0.3s;
+        position: absolute;
+        z-index: 5000;
+        height: 100vh;
+        left: -400px;
+        width: 400px;
+        top: 0;
+    }
+    menu#profile.activetrue {
+        left: 0;
+    }
+    menu a.menu-item {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        transition-duration: 0.1s;
+        border-radius: 10px;
+        color: #110033;
+        display: block;
+        padding: 10px;
+        width: 350px;
+    }
+    menu a.menu-item:hover {
+        background-color: #ffffff11;
+        padding-left: 20px;
+    }
+    div#buttonsAdd {
+        box-shadow: 0 0 10px 0 #000000;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        display: flex;
+        width: 100%;
+    }
+    div#buttonsAdd button {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-shadow: 0 0 3px #000000;
+        transition-duration: 0.2s;
+        color: #ffffff;
+        font-size: 100%;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+    }
+    div#buttonsAdd button:hover {
+        width: 130%;
+    }
+    button#addCard {
+        background-image: linear-gradient(45deg, #990011, #ff0066);
+    }
+    button#addMoment {
+        background-image: linear-gradient(45deg, #003399, #0099ff);
+    }
+    button#addChat {
+        background-image: linear-gradient(45deg, #993300, #ff9900);
+    }
+
+    div.fullscreen#addCard {
+        background-image: linear-gradient(45deg, #221133, #110033);
+        transition-duration: 0.3s;
+        position: absolute;
+        top: -100vh;
+        opacity: 0;
+        left: 0;
+    }
+    div.fullscreen#addCard.activetrue {
+        opacity: 1;
+        top: 0;
+        z-index: 2500;
+    }
+
+    div.formCont.addCard {
+        height: 100%;
+    }
+    div.formCont.addCard form {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        width: 400px;
+    }
+    div.formCont.addCard form input {
+        border-radius: 0px 10px 10px 10px;
+        background-color: #ffffff;
+        border: 1px solid #acacac;
+        color: #221133;
+        font-size: 120%;
+        padding: 10px;
+        margin: 5px;
+        width: 100%;
+    }
+    div.formCont.addCard form input#acHeading {
+        text-align: center;
+    }
+
+    div.formCont.addCard form input:focus {
+        border: 2px solid #221133;
+    }
+    div.formCont.addCard form input::placeholder {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-image: linear-gradient(45deg, #221133, #110033);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-size: 90%;
+    }
+    div.formCont.addCard form input[type=submit]:disabled {
+        background-image: linear-gradient(45deg, #554466, #443366);
+        border-radius: 10px;
+        color: #acacac;
+        border: none;
+        cursor: unset;
+    }
+    div.formCont.addCard form input[type=submit] {
+        background-image: linear-gradient(45deg, #660077, #330066);
+        transition-duration: 0.5s;
+        border-radius: 10px;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+    }
+
+    div.formCont.addCard form textarea.addCard#acDescription {
+        border-radius: 0px 10px 10px 10px;
+        background-color: #ffffff;
+        border: 1px solid #acacac;
+        user-select: #221133;
+        color: #221133;
+        font-size: 120%;
+        padding: 10px;
+        resize: none;
+        margin: 5px;
+        width: 100%;
+    }
+    
+    form p.addCard#fileName {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-image: linear-gradient(45deg, #002299, #006699);
+        border-radius: 0 10px 10px 10px;
+        text-align: center;
+        color: #ffffff;
+        padding: 10px;
+        margin: 5px;
+        width: 100%;
+    }
+
+    div.fullscreen#addCard button.addCard.Cancel {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: #ffffff;
+        border: 3px solid #ff0033;
+        transition-duration: 0.2s;
+        text-shadow: #ffffff;
+        border-radius: 10px;
+        margin-bottom: 10vh;
+        font-weight: bold;
+        color: #550011;
+        font-size: 100%;
+        padding: 10px;
+    }
+    div.fullscreen#addCard button#addCardCancel:hover {
+        background-image: linear-gradient(45deg, #dd0000, #dd0066);
+        border-color: #ffffff;
+        color: #ffffff;
+    }
+
+    div.creator {
+        padding: 0px 10px 10px 10px;
+        border-bottom: 2px solid #aa99ff;
+    }
+
+    div.creator div.leftSide span.creatorProfileImage {
+        background-position: center;
+        background-size: cover;
+        border-radius: 40%;
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+
+    div.creator div.leftSide p.creatorNickname {
+        text-shadow: 0 0 5px #000000;
+        font-family: cursive;
+        margin-left: 10px;
+        font-size: 110%;
+        color: #aa99ff;
+    }
+
+    div.cardContent {
+        padding: 10px 0;
+    }
+
+    div.cardContent h1.cardHeading {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: #ddddee;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+    }
+
+    div.cardContent div.cardImageBG {
+        background-size: cover;
+        border-radius: 10px;
+        position: relative;
+        margin: 10px auto;
+        margin-top: 10px;
+        overflow: hidden;
+        display: block;
+        height: 400px;
+        width: 90%;
+    }
+
+    div.cardContent div.cardImageCT {
+        backdrop-filter: blur(10px) brightness(0.5);
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    div.cardContent span.cardImageMN {
+        background-size: contain;
+        position: absolute;
+        display: block;
+        height: 80%;
+        width: 80%;
+        right: 5%;
+        top: 2%;
+    }
+
+    div.cardContent div.cardImageBG div.cardDescription {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        backdrop-filter: blur(10px) brightness(0.5);
+        text-shadow: 0 0 5px #000000;
+        transition-duration: 0.2s;
+        text-align: justify;
+        position: absolute;
+        color: #ffffff;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        left: 0;
+        top: 0;
+    } div.cardContent div.cardImageBG:hover div.cardDescription {
+        opacity: 1;
+    }
+
+    input#searchInput {
+        padding: 5px 5px 5px 20px;
+        border-radius: 10px;
+        width: 250px;
+        margin-left: 20px;
+    }
+
+    div#searchBox {
+        background-image: linear-gradient(135deg, #442266, #220066);
+        position: absolute;
+        padding: 10px;
+        width: 100vw;
+        float: left;
+        top: 70px;
+        left: 0;
+    }
+
+    div#searchBox div.accountResult {
+        border: 2px solid #999999;
+        transition-duration: 0.1s;
+        border-width: 2px 0 2px 0;
+        margin: 5px auto;
+        padding: 20px;
+        height: 40px;
+        width: 90%;
+    }
+    div#searchBox div.accountResult:hover {
+        background-color: #0099ff11;
+    }
+    div#searchBox div.accountResult span.profileImage {
+        background-position: center;
+        background-size: cover;
+        border-radius: 40%;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+    }
+    div#searchBox div.accountResult p.nickname {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        word-break: break-all;
+        margin-left: 10px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    div#searchBox div.accountResult button.subBtn {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-image: linear-gradient(45deg, #006699, #0099ff);
+        text-shadow: 0 0 5px #000000;
+        transition-duration: 0.1s;
+        border-radius: 5px;
+        color: #ffffff;
+        padding: 5px;
+    } div#searchBox div.accountResult button.subBtn:hover {
+        background-image: linear-gradient(45deg, #0099ff, #00aaff);
+    }
+}
+
+/* < 500 */
+
+@media only screen and (max-width: 500px) {}

@@ -1,0 +1,178 @@
+.menuOut {
+    transition-duration: 0.3s;
+    margin: 0;
+}
+
+.menuHover {
+    transition-duration: 0.5s;
+    margin-top: 0px;
+    margin-left: 10px;
+    transform: rotateY(10deg) translateZ(0px);
+}
+
+.menuClosed0 {
+    transform: translateZ(-20px) !important;
+    transition-duration: 0.3s;
+    margin: 0;
+}
+
+.menuOpened0 {
+    transform: translateZ(0px) !important;
+    transition-duration: 0.5s;
+    margin-top: 70px;
+}
+
+.menuClosed1 {
+    transform: translateZ(-20px) !important;
+    transition-duration: 0.3s;
+    margin: 0;
+}
+
+.menuOpened1 {
+    transform: translateZ(0px) !important;
+    transition-duration: 0.5s;
+    margin-top: 110px;
+}
+
+.m-auto {
+    text-align: center;
+}
+
+.menu-i-btn {
+    transition-duration: 0.2s;
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.menu-i-fr {
+    transition-duration: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.menu-i {
+    transition-duration: 0.2s;
+}
+
+.menu-i:hover {
+    transform: rotateY(15deg) !important;
+    margin-left: 10px;
+}
+
+.menu-i:active {
+    transform: rotateY(15deg) translateZ(-20px) !important;
+}
+
+.start-fr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.start-btn {
+    transition-duration: 0.2s;
+}
+
+.start-btn:hover {
+    transform: rotateX(-30deg) !important;
+}
+
+.start-btn:active {
+    transition-duration: 0.1s;
+    margin-top: 30px;
+    transform: translateZ(-30px) rotateX(-30deg) !important;
+}
+
+.started {
+    transition-duration: 0.5s;
+    margin-top: -100vh !important;
+}
+
+.score {
+    position: absolute;
+    right: 15vw;
+    top: 10px;
+    color: #ffffff;
+    font-size: 130%;
+    z-index: 10000;
+}
+
+.hiScore {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    color: #ffffff;
+    font-size: 130%;
+    z-index: 10000;
+}
+
+.right-button, .left-button {
+    z-index: 10000;
+    transition-duration: 0.1s;
+}
+
+.right-button:active, .left-button:active {
+    transform: translateZ(-25px) !important;
+}
+
+.choose-btn {
+    transition-duration: 0.1s;
+}
+
+.choose-btn:active {
+    transform: translateZ(-25px) !important;
+}
+
+.choose-btn .N_Front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose-btn-p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto;
+    color: #ffffff;
+}
+
+.choose-btn-active {
+    transform: translateZ(-25px) !important;
+}
+
+.N_Front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coins {
+    align-items: center;
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    height: 5vh;
+    left: 0px;
+    top: 10px;
+}
+
+.coins * {
+    position: unset !important;
+}
+
+.coins p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(45deg, #cc33ff 33%, #9933ff 66%, #3333ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: #0B2349;
+    font-size: 200%;
+}
