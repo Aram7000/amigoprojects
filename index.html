@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Choose Project</title>
+    <link rel="stylesheet" href="./Neon(c)/main.css">
+    <link rel="stylesheet" href="./Neon(c)/require.css">
+    <script src="./Neon(c)/main.js"></script>
+    <script src="./script.js"></script>
+    <style>
+        div#projects {
+            margin-top: 20px;
+            background-color: #eeeeee;
+        }
+        div#projects a.project {
+            color: #000000;
+        } div#projects a.project:hover {
+            background-color: #dddddd;
+            border-radius: 10px;;
+        }
+    </style>
 </head>
 <body>
-    <a href="Jumping Box/">jumping box</a>
-    <a href="Meee/">Meee</a>
-    <a href="Neon/">Neon</a>
+    <div id="NEON_loading">
+        <span class="NEON_loading-i" id="i1"></span>
+        <span class="NEON_loading-i" id="i2"></span>
+        <span class="NEON_loading-i" id="i3"></span>
+        <span class="NEON_loading-i" id="i4"></span>
+    </div>
+    <div id="projects" class="flex column p20">
+        <a class="project p10 m5" href="Jumping Box/">jumping box</a>
+    </div>
 </body>
 
 </body>
