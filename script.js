@@ -3,8 +3,7 @@ window.addEventListener("load", () => {
         type: 'POST',
             url: toRoot + 'echo.php',
             data: {
-                path: $path,
-                password: $password,
+                data: "asd",
             },
             success: function (data) {
                 alert(data)
