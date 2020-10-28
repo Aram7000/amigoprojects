@@ -1,5 +1,20 @@
 window.addEventListener("load", () => {
 
+    let incollider = (object_1, object_2) => {
+        let ax = object_1.offsetLeft;
+        let ay = object_1.offsetTop;
+        let aw = object_1.offsetWidth;
+        let ah = object_1.offsetHeight;
+
+        let bx = object_2.offsetLeft;
+        let by = object_2.offsetTop;
+        let bw = object_2.offsetWidth;
+        let bh = object_2.offsetHeight;
+
+
+        return (ax > (bx - aw) && ay > (by - ah) && ax < (bx + bw) && ay < (by + bh)) ? true : false;
+    }
+
     let qyartSkills = {
         type: "Hopar",
     }
@@ -29,22 +44,22 @@ window.addEventListener("load", () => {
         "Հայաստանի աֆտարիտետ",
         "Հայաստանը նայող",
         "Բեզ պիծիմինուտ",
-    ]
+    ];
 
     let ActiveLvl = qyartLvls[0];
 
     let play = false;
 
     let obj = {
-        qyart: document.getElementById('qyart'),
-        platform: document.getElementsByClassName('platform'),
-        tzbex: document.getElementById('tzbex'),
-        score: document.getElementsByClassName('score'),
-        premiumTzbex: document.getElementById('premiumtzbex'),
-        bichok: document.getElementById('bichok'),
-        moxraman: document.getElementById('moxraman'),
-        progress: document.getElementById('progress'),
-        qyartlvl: document.getElementById("qyart-lvl"),
+        qyart: document.querySelector('#qyart'),
+        platform: document.querySelectorAll('.platform'),
+        tzbex: document.querySelector('#tzbex'),
+        score: document.querySelectorAll('.score'),
+        premiumTzbex: document.querySelector('#premiumtzbex'),
+        bichok: document.querySelector('#bichok'),
+        moxraman: document.querySelector('#moxraman'),
+        progress: document.querySelector('#progress'),
+        qyartlvl: document.querySelector("#qyart-lvl"),
     }
 
     function lose() {
@@ -132,7 +147,7 @@ window.addEventListener("load", () => {
     }
 
 
-    
+
 
     bichok = {
         x: 5,
@@ -141,14 +156,14 @@ window.addEventListener("load", () => {
         fall: () => {
             if (play) {
                 if (bichok.y > 0) {
-                    bichok.y -= 0.5;
+                    bichok.y -= 0.75;
                 } else {
                     bichok.y = 100;
-                    bichok.x = Math.round(Math.random() * 60);
+                    bichok.x = Math.round(Math.random() * (100 - (100 / obj.bichok.offsetWidth)));
                     obj.bichok.style.left = bichok.x + "%";
                 }
             } else {
-                bichok.y = 0;
+                bichok.y = -100;
             }
             obj.bichok.style.bottom = bichok.y + "%";
         }
@@ -183,6 +198,7 @@ window.addEventListener("load", () => {
             }
         },
         protect: () => {
+            bichok.fall();
             if (play && moxraman.caught) {
                 moxraman.x = qyart.left;
                 moxraman.y = qyart.bottom + 9;
@@ -237,39 +253,41 @@ window.addEventListener("load", () => {
         jumping: false,
         touch: () => {
             if (play) {
-                if (qyart.left >= bichok.x - 15 && qyart.left <= bichok.x + 5 && qyart.bottom <= bichok.y + 5 && qyart.bottom >= bichok.y) {
+                if (incollider(obj.qyart, obj.bichok)) {
                     if (!moxraman.caught) {
                         lose();
                     } else {
                         moxraman.life--;
                         moxraman.rm();
-                        bichok.y = 80;
+                        bichok.y = 100;
                         bichok.x = Math.round(Math.random() * 90 + 5);
                         obj.bichok.style.left = bichok.x + "%";
                     }
                 }
-                if (moxraman.is && !moxraman.caught && qyart.left >= moxraman.x - 15 && qyart.left <= moxraman.x + 12 && qyart.bottom <= moxraman.y + 8 && qyart.bottom >= moxraman.y) {
+                if (moxraman.is && !moxraman.caught && incollider(obj.moxraman, obj.qyart)) {
                     moxraman.caught = true;
                     moxraman.life = 3;
                 }
-                if (qyart.left >= tzbex.x - 15 && qyart.left <= tzbex.x + 15 && qyart.bottom <= tzbex.y + 5 && qyart.bottom >= tzbex.y) {
+                if (incollider(obj.qyart, obj.tzbex)) {
                     tzbex.cd();
                     scores.ch(1);
                 }
-                if (premiumTzbex.is && qyart.left >= premiumTzbex.x - 15 && qyart.left <= premiumTzbex.x + 15 && qyart.bottom <= premiumTzbex.y + 5 && qyart.bottom >= premiumTzbex.y) {
+                if (premiumTzbex.is && incollider(obj.premiumTzbex, obj.qyart)) {
                     premiumTzbex.rm();
                     scores.ch(3);
                 }
             }
-            for (let i = 0; i < 2; i++) {
-                if (qyart.left >= platforms.pos[i].x - 15 && qyart.left <= platforms.pos[i].x + 17 && qyart.bottom <= platforms.pos[i].y + 5 && qyart.bottom >= platforms.pos[i].y) {
-                    qyart.speedY = 20;
-                    platforms.cd(i);
-                    scores.score++;
-                    scores.ch(0);
-                    play = true;
-                    qyart.double = true;
-                    break;
+            if (qyart.speedY <= 0) {
+                for (let i = 0; i < obj.platform.length; i++) {
+                    if (incollider(obj.qyart, obj.platform[i])) {
+                        qyart.speedY = 20;
+                        platforms.cd(i);
+                        scores.score++;
+                        scores.ch(0);
+                        play = true;
+                        qyart.double = true;
+                        break;
+                    }
                 }
             }
         },
@@ -301,6 +319,7 @@ window.addEventListener("load", () => {
                 lose();
             }
             obj.qyart.style.bottom = qyart.bottom + "%";
+            moxraman.protect();
         },
         jumpStartPosition: 0,
         jump: () => {
@@ -352,18 +371,16 @@ window.addEventListener("load", () => {
     });
 
 
-
-
     platforms.cd(0);
     platforms.cd(1);
     tzbex.cd();
 
-    setInterval(bichok.fall, 10);
+
     setInterval(premiumTzbex.cr, 5000);
     setInterval(moxraman.cr, 2000);
-    setInterval(moxraman.protect, 10);
     setInterval(qyart.move, 15);
 
 
+    document.querySelector("#NEON_loading").classList.add("fadeOut");
 
 });

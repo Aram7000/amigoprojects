@@ -27,8 +27,8 @@ window.addEventListener("load", () => {
     
     
     
-    if(localStorage.getItem("firstTime") != "true") {
-        localStorage.setItem("firstTime", "true");
+    if(localStorage.getItem("firstTime") == "true") {
+        localStorage.setItem("firstTime", "false");
         localStorage.setItem("score", 0);
         localStorage.setItem("hiscore", 0);
         localStorage.setItem("tzbex", 0);

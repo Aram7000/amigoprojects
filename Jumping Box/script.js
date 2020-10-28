@@ -108,7 +108,7 @@ let setup = () => {
         window.innerHeight / 20,
         window.innerHeight / 20,
         coinsCont,
-        "url('./assets/diamond.png') radial-gradient(#ffffff, transparent)",
+        "url('./assets/diamond.png')",
         "image",
     );
     coinsCount = document.createElement("p");
@@ -222,7 +222,7 @@ let setup = () => {
             window.innerHeight / 20,
             window.innerHeight / 20,
             gameScene,
-            "url('./assets/diamond.png') radial-gradient(#ffffff, transparent)",
+            "url('./assets/diamond.png')",
             "image",
         ),
         reset: () => {

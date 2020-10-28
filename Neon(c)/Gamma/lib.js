@@ -131,10 +131,10 @@ let circle = (x, y, z = 0, w, h, parent = document.body, background = "#ffffff",
     let c = document.createElement("span");
     c.classList.add("N_Circle");
     c.style.transform = `translateZ(${z}px)`;
-    if (backgroundType != "image") {
-        c.style.background = background;
-    } else {
+    if (backgroundType == "image") {
         c.style.backgroundImage = background;
+    } else {
+        c.style.background = background;
     }
     c.style.height = `${h}px`;
     c.style.width = `${w}px`;
