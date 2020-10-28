@@ -1,15 +1,18 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Qyart Jump</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./shop.js"></script>
+
 </head>
 
-<body>
-    <div class="main">
-        <div class="header">
+<body class="shop">
+    <main>
+        <header>
             <div class="tt rl">
                 <p class="score">Score: 0</p>
                 <div class="tzbex">
@@ -25,83 +28,19 @@
                     <p class="tzbexscore score">: 0</p>
                 </div>
             </div>
-        </div>
-
+        </header>
 
         <div class="scene">
             <div class="shop-scene">
-                <div class="item bidza" onclick="buy(0)">
-                    <img src="./img/qyart2.png" width=80%>
-                    <div class="price">
-                        <p class="p-price">100</p>
-                        <img src="./img/tzbex.png" width=30px>
-                    </div>
-                </div>
-                <div class="item bidza" onclick="buy(0)">
-                    <img src="./img/qyart2.png" width=80%>
-                    <div class="price">
-                        <p class="p-price">100</p>
-                        <img src="./img/tzbex.png" width=30px>
-                    </div>
-                </div>
-                <div class="item bidza" onclick="buy(0)">
-                    <img src="./img/qyart2.png" width=80%>
-                    <div class="price">
-                        <p class="p-price">100</p>
-                        <img src="./img/tzbex.png" width=30px>
-                    </div>
-                </div>
-                <div class="item bidza" onclick="buy(0)">
-                    <img src="./img/qyart2.png" width=80%>
-                    <div class="price">
-                        <p class="p-price">100</p>
-                        <img src="./img/tzbex.png" width=30px>
-                    </div>
-                </div>
-                <div class="item bidza" onclick="buy(0)">
-                    <img src="./img/qyart2.png" width=80%>
-                    <div class="price">
-                        <p class="p-price">100</p>
-                        <img src="./img/tzbex.png" width=30px>
-                    </div>
-                </div>
-                <div class="item bidza" onclick="buy(0)">
-                    <img src="./img/qyart2.png" width=80%>
-                    <div class="price">
-                        <p class="p-price">100</p>
-                        <img src="./img/tzbex.png" width=30px>
-                    </div>
-                </div>
-                <div class="item bidza" onclick="buy(0)">
-                    <img src="./img/qyart2.png" width=80%>
-                    <div class="price">
-                        <p class="p-price">100</p>
-                        <img src="./img/tzbex.png" width=30px>
-                    </div>
-                </div>
-                <div class="item bidza" onclick="buy(0)">
-                    <img src="./img/qyart2.png" width=80%>
-                    <div class="price">
-                        <p class="p-price">100</p>
-                        <img src="./img/tzbex.png" width=30px>
-                    </div>
-                </div>
-                <div class="item bidza" onclick="buy(0)">
-                    <img src="./img/qyart2.png" width=80%>
-                    <div class="price">
-                        <p class="p-price">100</p>
-                        <img src="./img/tzbex.png" width=30px>
-                    </div>
-                </div>
+
             </div>
         </div>
 
-        <div class="footer">
-            <a href="index.html" class="home-button" style="background-color: #ffffff; height: 90%; width: 25%; border-radius: 20px; box-shadow: inset 0 0 10px #550000;"></a>
-            <a href="game.html" class="shop-button">PLAY</a>
-        </div>
-    </div>
-    <script src="./shop.js"></script>
+        <footer>
+            <a href="index.html" id="home-button"></a>
+            <a href="game.html" id="play-button">PLAY</a>
+        </footer>
+    </main>
 </body>
 
 </html>
