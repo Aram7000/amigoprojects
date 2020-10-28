@@ -1,5 +1,6 @@
 window.addEventListener("load", () => {
-    
+
+
 
 
     let incollider = (object_1, object_2) => {
@@ -48,8 +49,10 @@ window.addEventListener("load", () => {
         "Բեզ պիծիմինուտ",
     ];
 
-    let ActiveLvl = qyartLvls[0];
-
+    let oneRound = {
+        tzbex: 0,
+        prtz: 0,
+    }
     let play = false;
 
     let obj = {
@@ -64,27 +67,79 @@ window.addEventListener("load", () => {
         qyartlvl: document.querySelector("#qyart-lvl"),
     }
 
+    let animation2_box;
+    let animation2 = (object = obj.score[0], size = 5) => {
+        clearInterval(animation2_box);
+        let reached = false;
+        let csize = size;
+        animation2_box = setInterval(() => {
+
+            if (!reached && csize <= size + 1) {
+                csize += 0.1;
+            } else {
+                reached = true;
+                csize -= 0.1;
+            }
+            object.style.cssText = `font-size: ${csize}vh`;
+            if (csize <= size) {
+                csize = size;
+                object.style.cssText = `font-size: ${csize}vh`;
+                clearInterval(animation2_box);
+            }
+        }, 1);
+    }
+
+
     function lose() {
+        let esc = document.querySelector(".e-score");
+        esc.innerHTML = 0;
         play = false;
         qyart.left = 10;
         qyart.bottom = 1;
         scores.arr[5] += scores.arr[0];
-        let w1 = Math.floor(scores.arr[5] / 100);
-        let w2 = scores.arr[5] - (w1 * 100);
-        if (scores.arr[2] < scores.arr[0]) {
-            scores.arr[2] = scores.arr[0];
-        }
+        let s1 = scores.arr[0];
+        document.querySelector(".loseScreen").classList.add("active");
+        let animation3 = setInterval(() => {
+            if (esc.innerHTML < s1) {
+                esc.innerHTML = parseInt(esc.innerHTML) + 1;
+            } else {
+                clearInterval(animation3);
+            }
+        }, 10);
+        document.querySelector(".e-tzbex p").innerHTML = ": " + oneRound.tzbex;
+        document.querySelector(".e-prtz p").innerHTML = ": " + oneRound.prtz;
         scores.arr[0] = 0;
         scores.ch(6);
         moxraman.life = 0;
         moxraman.rm();
-
-        obj.progress.style.width = w2 + "%";
+        w3 = w2;
+        w1 = Math.floor(scores.arr[5] / 100);
+        w2 = scores.arr[5] - (w1 * 100);
+        w4 = (w2 < w3) ? 100 + w2 : w2;
+        if (scores.arr[2] < scores.arr[0]) {
+            scores.arr[2] = scores.arr[0];
+        }
+        let animation1 = setInterval(() => {
+            if (w3 <= w4) {
+                if (w3 >= 100) {
+                    w3 = 0;
+                    w4 -= 100;
+                }
+                w3 += 0.075;
+                obj.progress.style.width = w3 + "%";
+            } else {
+                obj.progress.style.width = w2 + "%";
+                clearInterval(animation1);
+            }
+        }, 1);
 
         if (w1 >= qyartLvls.length - 1) {
             w1 = qyartLvls.length - 1;
         }
         obj.qyartlvl.innerHTML = qyartLvls[w1];
+        oneRound.tzbex = 0;
+        oneRound.prtz = 0;
+        
     }
 
     let scores = {
@@ -99,10 +154,7 @@ window.addEventListener("load", () => {
 
         ch: (a) => {
             scores.arr[a]++;
-            obj.score[0].innerText = "Score: " + scores.arr[0];
-            obj.score[1].innerText = ": " + scores.arr[1];
-            obj.score[2].innerText = "High Score: " + scores.arr[2];
-            obj.score[3].innerText = ": " + scores.arr[3];
+            obj.score[0].innerText = scores.arr[0];
             localStorage.setItem("tzbex", scores.arr[1]);
             localStorage.setItem("hiscore", scores.arr[2]);
             localStorage.setItem("premiumtzbex", scores.arr[3]);
@@ -273,21 +325,24 @@ window.addEventListener("load", () => {
                 if (incollider(obj.qyart, obj.tzbex)) {
                     tzbex.cd();
                     scores.ch(1);
+                    oneRound.tzbex++;
                 }
                 if (premiumTzbex.is && incollider(obj.premiumTzbex, obj.qyart)) {
                     premiumTzbex.rm();
                     scores.ch(3);
+                    oneRound.prtz++;
                 }
             }
             if (qyart.speedY <= 0) {
                 for (let i = 0; i < obj.platform.length; i++) {
                     if (incollider(obj.qyart, obj.platform[i])) {
+                        qyart.double = true;
                         qyart.speedY = 20;
                         platforms.cd(i);
                         scores.score++;
+                        animation2();
                         scores.ch(0);
                         play = true;
-                        qyart.double = true;
                         break;
                     }
                 }
@@ -372,6 +427,9 @@ window.addEventListener("load", () => {
         qyart.touchEnd();
     });
 
+    document.querySelector(".play-again").addEventListener("click", () => {
+        document.querySelector(".loseScreen").classList.remove("active");
+    });
 
     platforms.cd(0);
     platforms.cd(1);
@@ -383,6 +441,18 @@ window.addEventListener("load", () => {
     setInterval(qyart.move, 15);
 
 
-    document.querySelector("#NEON_loading").classList.add("fadeOut");
+    let w1 = Math.floor(scores.arr[5] / 100);
+    let w2 = scores.arr[5] - (w1 * 100);
+    let w3 = w2;
+    if (scores.arr[2] < scores.arr[0]) {
+        scores.arr[2] = scores.arr[0];
+    }
+    obj.progress.style.width = w2 + "%";
+
+    setTimeout(() => {
+        document.querySelector(".loseScreen").classList.remove("active");
+        document.querySelector("#NEON_loading").classList.add("fadeOut");
+    }, 50);
+
 
 });

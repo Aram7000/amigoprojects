@@ -1,9 +1,9 @@
 window.addEventListener("load", () => {
-    obj = {
+    let obj = {
         score: document.getElementsByClassName('score'),
     }
 
-    scores = {
+    let scores = {
         arr: [0, 0, 0, 0, 0, 0],
         //score: 0
         //tzbexscore: 1
@@ -39,38 +39,62 @@ window.addEventListener("load", () => {
         scores.ch(5);
     }
 
-    items = [
-        {
-            name: "Ջահել",
-            priceType: "tzbex",
-            price: 100,
-            img: "qyart",
-        },
-    ];
-
-    for (let i in items) {
-        document.querySelector(".shop-scene").innerHTML += `
-            <div class="shop-i">
-                <span class="item-i" style="background-image: url('./img/${items[i].img}2.png')"></span>
-                <div class="price-cont">
-
-
-                </div>
-            </div>
-        
-        `;
-
-    }
-
-
-
-    buy = (a) => {
-        let tzbex = scores.arr[1];
-        let premiumTzbex = scores.arr[3];
-        
-        if (tzbex >= items[a].price) {
-            scores.arr[1] -= items[a].price;
-            scores.ch(5);
+    let purchasedCharacters;
+    if (localStorage.getItem("purchasedCharacters") == null) {
+        localStorage.setItem("purchasedCharacters", "");
+    } else {
+        let txt = localStorage.getItem("purchasedCharacters").split(",");
+        if (txt[0] == "") {
+            purchasedCharacters = [];
+        } else {
+            purchasedCharacters = txt;
         }
     }
+
+    let innerHTML = "";
+    for (let i in characters) {
+        const character = characters[i];
+        shopI = `
+            <div class="shop-i">
+                <span class="item-i block" style="background-image: url('./img/${character.img}2.png')"></span>
+                <div class="price-cont">
+                    <p class="item-p">${character.price}</p>
+                    <span class="block premiumtzbex-img"></span>
+                </div>
+            </div>
+        `
+        if (i % 2 == 0) {
+
+            innerHTML += `
+            <div class="flex row aic jca w100 p10">
+                ${shopI}
+                
+                `;
+
+        } else {
+            innerHTML += `
+                ${shopI}
+            </div>
+            `;
+        }
+
+    }
+    document.querySelector(".shop-scene").innerHTML += innerHTML;
+
+    let shopItems = document.querySelectorAll(".shop-i");
+    for (let i = 0; i < shopItems.length; i++) {
+        const item = shopItems[i];
+        item.addEventListener("click", ()=>{
+            purchase(i);
+        });
+    }
+
+    let purchase = (i) => {
+        if (scores.arr[3] >= characters[i].price) {
+
+        } else {
+
+        }
+    }
+
 });

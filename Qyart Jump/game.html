@@ -1,7 +1,7 @@
+<html>
 
-<html>  
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Qyart Jump</title>
@@ -22,30 +22,13 @@
 
         <header class="flex column w100">
             <div class="qyart-progress">
-                <div id="progress" class="progress">
-                    <p id="qyart-lvl"></p>
-                
+                <div id="progress" class="progress flex aic jcc">
+
                 </div>
             </div>
-            <div class="scores-m flex w100 aic jcb">
-                <a class="home-button" href="index.html"></a>
-                <div class="scores">
-                    <div class="tt rl">
-                        <p class="score">Score: 0</p>
-                        <div class="tzbex">
-                            <div class="tzbeximg"></div>
-                            <p class="tzbexscore score">: 0</p>
-                        </div>
-                    </div>
-
-                    <div class="pt rl">
-                        <p class="hiscore score">High Score: 0</p>
-                        <div class="tzbex">
-                            <div class="premiumtzbeximg"></div>
-                            <p class="tzbexscore score">: 0</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="w100 flex row jcb ais">
+                <p class="score">0</p>
+                <p id="qyart-lvl"></p>
             </div>
         </header>
 
@@ -58,7 +41,24 @@
             <div id="tzbex"></div>
             <div id="qyart" class="person"></div>
         </div>
+        <div class="loseScreen flex aic jcc">
+            <div class="relative">
+                <p class="end e-score">0</p>
+                <div class="flex row aic jcc end e-tzbex">
+                    <span class="block tzbeximg"></span>
+                    <p>: 0</p>
+                </div>
+                <div class="flex row aic jcc end e-prtz">
+                    <span class="block premiumtzbeximg"></span>
+                    <p>: 0</p>
+                </div>
+                <div class="flex row aic jca end e-buttons">
+                    <button class="play-again"></button>
+                    <a class="home-button" href="index.html"></a>
+                </div>
+            </div>
 
+        </div>
 
         <footer>
 

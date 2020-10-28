@@ -20,8 +20,9 @@ main {
 /*global*/
 
 header {
+    background-image: linear-gradient(45deg, #333333, #404040, #111111);
     font-size: 150%;
-    position: fixed;
+    display: flex;
     height: 15%;
     width: 100%;
     z-index: 2;
@@ -31,96 +32,24 @@ header {
 
 .scene {
     background-image: url("./img/background.png");
-    align-items: flex-end;
     background-size: cover;
+    align-items: flex-end;
     position: relative;
     display: flex;
-    height: 90%;
+    height: 75%;
     width: 100%;
     z-index: 1;
 }
 
 footer {
-    width: 100%;
-    height: 10%;
-    background-size: cover;
     background-image: url("./img/asphalt.jpg");
-    display: flex;
     justify-content: space-around;
+    background-size: cover;
     align-items: center;
-}
-
-.loseScreen {
-    box-shadow: inset 0 0 30vw 0px #000000;
-    background-color: #000000aa;
-    transition-duration: 0.2s;
-    position: fixed;
-    bottom: -100vh;
-    height: calc(100vh - 5px);
-    width: 100vw;
-    z-index: 2;
-    opacity: 0;
-    left: 0;
-}
-
-.loseScreen.active {
-    opacity: 1;
-    bottom: 0;
-}
-/* Lose Screen */
-
-.loseScreen .relative {
-    height: 100%;
-    width: 100%;
-}
-
-.end {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    color: #ffffff;
-}
-
-.end span.block {
-    margin-top: 2vh;
-    height: 7vh;
-}
-
-
-.e-score {
-    font-size: 8vh;
-    left: 50%;
-    top: 15%;
-}
-
-.e-tzbex {
-    font-size: 6vh;
-    width: 100%;
-    left: 50%;
-    top: 40%;
-}
-.e-prtz {
-    font-size: 6vh;
-    width: 100%;
-    left: 50%;
-    top: 60%;
-}
-
-.e-buttons {
+    display: flex;
     height: 10%;
     width: 100%;
-    left: 50%;
-    top: 80%;
 }
-
-button.play-again {
-    background-image: url("./img/again_btn.png");
-    background-color: transparent;
-    display: block;
-    padding: 5% 10%;
-}
-
-
 
 /*footer*/
 
@@ -141,10 +70,6 @@ button.play-again {
 
 /*header*/
 
-.header-bottom {
-    height: 90%;
-    width: 100%;
-}
 
 .qyart-progress {
     height: 5px;
@@ -160,6 +85,7 @@ button.play-again {
 
 p#qyart-lvl {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #222222;
     text-align: center;
     color: #cdcdcd;
     font-size: 2.5vh;
@@ -206,14 +132,10 @@ header .rl {
     align-items: center;
     display: flex;
     height: 100%;
-    width: 90%;
+    width: 100%;
 }
 
-.home-button {
-    background-image: url("./img/home_button.png");
-    height: 100%;
-    width: 10%;
-}
+
 
 .shop #home-button {
     background-image: url("./img/home_button.png");
@@ -245,10 +167,9 @@ header .rl {
     background-image: linear-gradient(45deg, #acacac, #cdcdcd, #bcbcbc);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    position: absolute;
+    font-size: calc(1vh + 1.5vw);
     font-weight: bold;
     color: #acacac;
-    font-size: 5vh;
     padding: 20px;
 }
 

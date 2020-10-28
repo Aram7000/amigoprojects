@@ -1,33 +1,44 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Qyart Jump</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
     <script src="./home.js"></script>
 
 </head>
 
 <body>
     <main>
-        <header>
-            <div class="tt rl">
-                <p class="score">Score: 0</p>
-                <div class="tzbex">
-                    <div class="tzbeximg"></div>
-                    <p class="tzbexscore score">: 0</p>
+        <header class="flex column w100">
+            <div class="qyart-progress">
+                <div id="progress" class="progress">
+                    
                 </div>
             </div>
-
-            <div class="pt rl">
-                <p class="hiscore score">High Score: 0</p>
-                <div class="tzbex">
-                    <div class="premiumtzbeximg"></div>
-                    <p class="tzbexscore score">: 0</p>
+            <div class="scores-m flex w100 aic jcb">
+                <div class="scores">
+                    <div class="tt rl">
+                        <p class="score">Score: 0</p>
+                        <div class="tzbex">
+                            <div class="tzbeximg"></div>
+                            <p class="tzbexscore score">: 0</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pt rl">
+                        <p class="hiscore score">High Score: 0</p>
+                        <div class="tzbex">
+                            <div class="premiumtzbeximg"></div>
+                            <p class="tzbexscore score">: 0</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
+        <p id="qyart-lvl"></p>
 
 
         <div class="scene">
