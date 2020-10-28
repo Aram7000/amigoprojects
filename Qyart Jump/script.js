@@ -1,4 +1,6 @@
 window.addEventListener("load", () => {
+    
+
 
     let incollider = (object_1, object_2) => {
         let ax = object_1.offsetLeft;
@@ -331,7 +333,7 @@ window.addEventListener("load", () => {
         },
         touchStart: (s) => {
             qyart.speedX = s;
-            obj.qyart.style.backgroundImage = `url("./img/qyart${(s > 0) ? "2" : "-2"}.png")`
+            obj.qyart.style.backgroundImage = `url("./img/anime-qyart${(s > 0) ? "2" : "-2"}.png")`
         },
         touchEnd: () => {
             qyart.speedX = 0;
@@ -341,10 +343,10 @@ window.addEventListener("load", () => {
     document.body.addEventListener("keydown", (evt) => {
         if (evt.keyCode == 37) {
             qyart.speedX = -2;
-            obj.qyart.style.backgroundImage = 'url("./img/qyart-2.png")';
+            obj.qyart.style.backgroundImage = 'url("./img/anime-qyart-2.png")';
         } else if (evt.keyCode == 39) {
             qyart.speedX = 2;
-            obj.qyart.style.backgroundImage = 'url("./img/qyart2.png")';
+            obj.qyart.style.backgroundImage = 'url("./img/anime-qyart2.png")';
         } else if (evt.keyCode == 32) {
             qyart.jump();
         }
