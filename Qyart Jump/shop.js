@@ -37,8 +37,8 @@ window.addEventListener("load", () => {
         scores.arr[1] = localStorage.getItem("tzbex");
         scores.arr[2] = localStorage.getItem("hiscore");
         scores.arr[3] = localStorage.getItem("premiumtzbex");
-        scores.arr[3] = localStorage.getItem("premiumtzbex");
-        scores.ch(5);
+        scores.arr[5] = parseInt(localStorage.getItem("progress"));
+        scores.ch(6);
     }
 
     let purchasedCharacters;
