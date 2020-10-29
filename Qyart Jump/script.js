@@ -184,7 +184,7 @@ window.addEventListener("load", () => {
         },
     }
 
-    if (localStorage.getItem("firstTime") == "true") {
+    if (localStorage.getItem("firstTime") == "true" || localStorage.getItem("firstTime") == null) {
         localStorage.setItem("firstTime", "false");
         localStorage.setItem("score", 0);
         localStorage.setItem("hiscore", 0);

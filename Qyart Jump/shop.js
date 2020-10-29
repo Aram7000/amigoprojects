@@ -25,16 +25,18 @@ window.addEventListener("load", () => {
     }
 
 
-    if (localStorage.getItem("firstTime") == "true") {
+    if (localStorage.getItem("firstTime") == "true" || localStorage.getItem("firstTime") == null) {
         localStorage.setItem("firstTime", "false");
         localStorage.setItem("score", 0);
         localStorage.setItem("hiscore", 0);
         localStorage.setItem("tzbex", 0);
         localStorage.setItem("premiumtzbex", 0);
+        localStorage.setItem("progress", 0);
     } else {
         scores.arr[0] = 0;
         scores.arr[1] = localStorage.getItem("tzbex");
         scores.arr[2] = localStorage.getItem("hiscore");
+        scores.arr[3] = localStorage.getItem("premiumtzbex");
         scores.arr[3] = localStorage.getItem("premiumtzbex");
         scores.ch(5);
     }

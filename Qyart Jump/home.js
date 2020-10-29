@@ -42,6 +42,7 @@ window.addEventListener("load", () => {
 
         ch: (a) => {
             scores.arr[a]++;
+            obj.score[0].innerText = scores.arr[0];
             localStorage.setItem("tzbex", scores.arr[1]);
             localStorage.setItem("hiscore", scores.arr[2]);
             localStorage.setItem("premiumtzbex", scores.arr[3]);
@@ -49,7 +50,7 @@ window.addEventListener("load", () => {
         },
     }
 
-    if (localStorage.getItem("firstTime") == "true") {
+    if (localStorage.getItem("firstTime") == "true" || localStorage.getItem("firstTime") == null) {
         localStorage.setItem("firstTime", "false");
         localStorage.setItem("score", 0);
         localStorage.setItem("hiscore", 0);
