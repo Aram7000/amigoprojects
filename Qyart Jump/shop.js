@@ -14,10 +14,8 @@ window.addEventListener("load", () => {
 
         ch: (a) => {
             scores.arr[a]++;
-            obj.score[0].innerText = "Score: " + scores.arr[0];
-            obj.score[1].innerText = ": " + scores.arr[1];
-            obj.score[2].innerText = "High Score: " + scores.arr[2];
-            obj.score[3].innerText = ": " + scores.arr[3];
+            obj.score[0].innerText = ": " + scores.arr[1];
+            obj.score[1].innerText = ": " + scores.arr[3];
             localStorage.setItem("tzbex", scores.arr[1]);
             localStorage.setItem("hiscore", scores.arr[2]);
             localStorage.setItem("premiumtzbex", scores.arr[3]);
@@ -93,7 +91,7 @@ window.addEventListener("load", () => {
 
     let purchase = (i) => {
         if (scores.arr[3] >= characters[i].price) {
-
+            console.log("purchased");
         } else {
 
         }

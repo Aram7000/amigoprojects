@@ -42,7 +42,7 @@ window.addEventListener("load", () => {
 
         ch: (a) => {
             scores.arr[a]++;
-            obj.score[0].innerText = scores.arr[0];
+            // obj.score[0].innerText = scores.arr[0];
             localStorage.setItem("tzbex", scores.arr[1]);
             localStorage.setItem("hiscore", scores.arr[2]);
             localStorage.setItem("premiumtzbex", scores.arr[3]);
@@ -50,12 +50,12 @@ window.addEventListener("load", () => {
         },
     }
 
-    if (localStorage.getItem("firstTime") == "true" || localStorage.getItem("firstTime") == null) {
+    if (localStorage.getItem("firstTime") != "false") {
         localStorage.setItem("firstTime", "false");
-        localStorage.setItem("score", 0);
         localStorage.setItem("hiscore", 0);
         localStorage.setItem("tzbex", 0);
         localStorage.setItem("premiumtzbex", 0);
+        localStorage.setItem("progress", 0);
     } else {
         scores.arr[0] = 0;
         scores.arr[1] = localStorage.getItem("tzbex");
@@ -77,11 +77,9 @@ window.addEventListener("load", () => {
     }
     obj.qyartlvl.innerHTML = qyartLvls[w1];
 
-
-    obj.score[0].innerHTML = "Score: " + scores.arr[0];
-    obj.score[1].innerHTML = ": " + scores.arr[1];
-    obj.score[2].innerHTML = "High Score: " + scores.arr[2];
-    obj.score[3].innerHTML = ": " + scores.arr[3];
+    // obj.score[0].innerHTML = ": " + scores.arr[1];
+    // obj.score[1].innerHTML = ": " + scores.arr[2];
+    // obj.score[2].innerHTML = "High Score: " + scores.arr[3];
 
 
 

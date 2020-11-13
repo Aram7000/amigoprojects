@@ -12,11 +12,5 @@ let characters = [
         name: "Anime",
         price: 100,
     },
-    {
-        img: "anime-qyart",
-        speed: 1.5,
-        name: "Anime",
-        price: 3,
-    },
 ];
 

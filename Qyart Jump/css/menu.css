@@ -1,0 +1,485 @@
+* {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/*global*/
+
+body {
+    background-image: url("../img/background.png");
+    background-size: cover;
+}
+
+
+header {
+    font-size: 150%;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+
+.scene {
+    align-items: flex-end;
+    position: relative;
+    display: flex;
+    height: 90%;
+    width: 100%;
+    z-index: 1;
+}
+
+footer {
+    background-image: url("../img/asphalt.jpg");
+    box-shadow: inset 0 10px 10px #00000088;
+    border-top: 5px solid #000000bb;
+    justify-content: space-around;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    height: 10%;
+    width: 100%;
+}
+
+/*footer*/
+
+.button {
+    position: absolute;
+    width: 33%;
+    height: 80%;
+    bottom: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+/*header*/
+
+
+.qyart-progress {
+    background-image: linear-gradient(45deg, #333333, #404040, #111111);
+    height: 5px;
+    width: 100vw;
+}
+
+.progress {
+    background-image: linear-gradient(45deg, #ffffff, #acacac);
+    border-radius: 0 5px 5px 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+p#qyart-lvl {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #cdcdcd;
+    font-size: 2.5vh;
+    padding: 10px;
+    width: 100%;
+}
+
+
+.scores-m {
+    height: calc(100% - 18px);
+}
+
+.scores {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.score {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient(45deg, #acacac, #cdcdcd, #bcbcbc);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: calc(1vh + 1.5vw);
+    font-weight: bold;
+    color: #acacac;
+    padding: 20px;
+}
+
+/*objects*/
+
+.person {
+    background-image: url("../img/qyart2.png");
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+.platform {
+    background-image: url("../img/lada.png");
+    position: absolute;
+    height: 10%;
+    width: 17%;
+}
+
+#tzbex {
+    position: absolute;
+    width: 15%;
+    height: 10%;
+    background-image: url("../img/tzbex.png");
+}
+
+
+#premiumtzbex {
+    position: absolute;
+    width: 15%;
+    height: 10%;
+}
+
+#moxraman {
+    position: absolute;
+    width: 12%;
+    height: 8%;
+}
+
+/* home page */
+
+.home-scene {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.play-button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: inset 0 0 10px #111111;
+    background-color: #333333;
+    justify-content: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #acacac;
+    font-size: 150%;
+    display: flex;
+    padding: 20px;
+}
+
+.download-button {
+    box-shadow: 0 0 10px 0 #000000;
+    text-shadow: 0 0 5px #000000;
+    background-color: #0066aa;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #dedede;
+    padding: 10px;
+}
+
+.shop-button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: inset 0 0 10px #111111;
+    background-color: #333333;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    font-weight: bolder;
+    border-radius: 30%;
+    color: #acacac;
+    display: flex;
+    padding: 4%;
+}
+
+.shop-scene {
+    box-sizing: border-box;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* shop items */
+
+.shop-i {
+    background-color: #acacac55;
+    border-radius: 10px;
+    padding: 10px;
+    width: 40vw;
+}
+
+.shop-i .item-i {
+    width: 35vw;
+    height: 35vw;
+}
+
+.shop-i .item-p {
+    color: #00ffaa;
+}
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+/* ------------------------------------- REQUIRE ---------------------------------------------------------- */
+
+* {
+    background-repeat: no-repeat;
+    background-position: center;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    border: 1px solid #999999;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.aic {
+    align-items: center;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jca {
+    justify-content: space-around;
+}
+
+.jcs {
+    justify-content: start;
+}
+
+.jce {
+    justify-content: end;
+}
+
+.jcb {
+    justify-content: space-between;
+}
+
+.p5 {
+    padding: 5px;
+}
+
+.p10 {
+    padding: 10px;
+}
+
+.p20 {
+    padding: 20px;
+}
+
+.m5 {
+    margin: 5px;
+}
+
+.m10 {
+    margin: 10px;
+}
+
+.m20 {
+    margin: 20px;
+}
+
+.m-top5 {
+    margin-top: 5px;
+}
+
+.m-top10 {
+    margin-top: 10px;
+}
+
+.m-top20 {
+    margin-top: 20px;
+}
+
+.m-bottom5 {
+    margin-bottom: 5px;
+}
+
+.m-bottom10 {
+    margin-bottom: 10px;
+}
+
+.m-bottom20 {
+    margin-bottom: 20px;
+}
+
+.oh {
+    overflow: hidden;
+}
+
+.oyh {
+    overflow-y: hidden;
+}
+
+.oxh {
+    overflow-x: hidden;
+}
+
+.oa {
+    overflow: auto;
+}
+
+.oya {
+    overflow-y: auto;
+}
+
+.oxa {
+    overflow-x: auto;
+}
+
+.v0 {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0%;
+    margin: 0;
+    border: none;
+}
+
+section.onescreen {
+    width: 100%;
+    height: 100vh;
+}
+
+.backblur20 {
+    backdrop-filter: blur(20px);
+}
+
+.backblur10 {
+    backdrop-filter: blur(10px);
+}
+
+.backblur5 {
+    backdrop-filter: blur(5px);
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.fadeout {
+    animation: fadeout 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        display: none !important;
+        opacity: 0 !important;
+        height: 0px !important;
+        width: 0px !important;
+        z-index: 0;
+    }
+}

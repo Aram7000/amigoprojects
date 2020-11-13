@@ -419,7 +419,7 @@ window.addEventListener("load", () => {
     document.querySelector("footer").addEventListener("touchmove", (evt) => {
         let speed = (evt.touches[0].pageX - window.innerWidth / 2) / (window.innerWidth / 2);
         qyart.touchStart(speed * 3);
-        if (evt.touches[0].pageY < (window.innerHeight / 3) * 2) {
+        if (evt.touches[0].pageY < (window.innerHeight / 5) * 4) {
             qyart.jump();
         }
     });

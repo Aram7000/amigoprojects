@@ -17,32 +17,36 @@ main {
     width: 100%;
 }
 
-/*global*/
+/* GLOBAL */
+
+
+body {
+    background-image: url("../img/background.png");
+    background-size: cover;
+}
 
 header {
-    background-image: linear-gradient(45deg, #333333, #404040, #111111);
+    background-image: linear-gradient(45deg, #ffffff66, #dedede66, #ffffff66);
     font-size: 150%;
     display: flex;
-    height: 15%;
     width: 100%;
+    height: 7%;
     z-index: 2;
     left: 0;
     top: 0;
 }
 
 .scene {
-    background-image: url("./img/background.png");
-    background-size: cover;
     align-items: flex-end;
     position: relative;
     display: flex;
-    height: 75%;
+    height: 90%;
     width: 100%;
     z-index: 1;
 }
 
 footer {
-    background-image: url("./img/asphalt.jpg");
+    background-image: url("../img/asphalt.jpg");
     justify-content: space-around;
     background-size: cover;
     align-items: center;
@@ -70,153 +74,23 @@ footer {
 
 /*header*/
 
-
-.qyart-progress {
-    height: 5px;
-    width: 100vw;
-}
-
-.progress {
-    background-image: linear-gradient(45deg, #ffffff, #acacac);
-    border-radius: 0 5px 5px 0;
-    overflow: hidden;
-    height: 100%;
-}
-
-p#qyart-lvl {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #222222;
-    text-align: center;
-    color: #cdcdcd;
-    font-size: 2.5vh;
-    width: 100%;
-}
-
-header .rl {
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    height: 100%;
+.tzCount {
     width: 50%;
 }
 
-.tzbex {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 50%;
-    width: 100%;
-}
-
-.tzbeximg {
-    background-image: url("./img/tzbex.png");
-    background-size: contain;
-    height: 90%;
-    width: 35%;
-}
-
-.premiumtzbeximg {
-    background-image: url("./img/premiumtzbex.png");
-    background-size: contain;
-    height: 90%;
-    width: 35%;
-}
-
-.scores-m {
-    height: calc(100% - 18px);
-}
-
-.scores {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-
-
-.shop #home-button {
-    background-image: url("./img/home_button.png");
-    box-shadow: inset 0 0 10px #111111;
-    background-color: #acacac;
-    background-size: 70%;
-    border-radius: 30%;
-    color: #acacac;
-    display: block;
-    padding: 6%;
-}
-
-.shop #play-button {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-shadow: inset 0 0 10px #111111;
-    background-color: #333333;
-    justify-content: center;
-    text-decoration: none;
-    align-items: center;
-    font-weight: bolder;
-    border-radius: 30%;
-    color: #acacac;
-    display: flex;
-    padding: 4%;
-}
-
 .score {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image: linear-gradient(45deg, #acacac, #cdcdcd, #bcbcbc);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    font-size: calc(1vh + 1.5vw);
-    font-weight: bold;
-    color: #acacac;
-    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    color: #161616;
+    font-size: 90%;
 }
 
-/*objects*/
-
-.person {
-    background-image: url("./img/qyart2.png");
-    width: 15%;
-    height: 15%;
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
+.tzbexImg {
+    margin: 10px;
+    width: 30%;
 }
 
-.platform {
-    position: absolute;
-    width: 17%;
-    height: 10%;
-    background-image: url("./img/lada.png");
-}
 
-#tzbex {
-    position: absolute;
-    width: 15%;
-    height: 10%;
-    background-image: url("./img/tzbex.png");
-}
-
-#bichok {
-    position: absolute;
-    width: 5%;
-    height: 5%;
-    background-image: url("./img/sigaret.png");
-    transform: rotate(45deg);
-}
-
-#premiumtzbex {
-    position: absolute;
-    width: 15%;
-    height: 10%;
-}
-
-#moxraman {
-    position: absolute;
-    width: 12%;
-    height: 8%;
-}
 
 /* home page */
 
@@ -244,17 +118,20 @@ header .rl {
     padding: 20px;
 }
 
-.download-button {
-    box-shadow: 0 0 10px 0 #000000;
-    text-shadow: 0 0 5px #000000;
-    background-color: #0066aa;
-    border-radius: 10px;
-    margin-top: 10px;
-    color: #dedede;
-    padding: 10px;
+/* SHOP  */
+
+.shop #home-button {
+    background-image: url("../img/home_button.png");
+    box-shadow: inset 0 0 10px #111111;
+    background-color: #acacac;
+    background-size: 70%;
+    border-radius: 30%;
+    color: #acacac;
+    display: block;
+    padding: 6%;
 }
 
-.shop-button {
+.shop #play-button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-shadow: inset 0 0 10px #111111;
     background-color: #333333;
@@ -270,10 +147,10 @@ header .rl {
 
 .shop-scene {
     box-sizing: border-box;
+    padding-top: 10%;
     overflow-y: auto;
     height: 100%;
     width: 100%;
-    padding-top: 20px;
 }
 
 /* shop items */

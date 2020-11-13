@@ -31,7 +31,7 @@ header {
 }
 
 .scene {
-    background-image: url("./img/background.png");
+    background-image: url("../img/background.png");
     align-items: flex-end;
     background-size: cover;
     position: relative;
@@ -42,13 +42,15 @@ header {
 }
 
 footer {
-    width: 100%;
-    height: 10%;
-    background-size: cover;
-    background-image: url("./img/asphalt.jpg");
-    display: flex;
+    background-image: url("../img/asphalt.jpg");
+    box-shadow: inset 0 10px 10px #00000088;
+    border-top: 5px solid #000000bb;
     justify-content: space-around;
+    background-size: cover;
     align-items: center;
+    display: flex;
+    height: 10%;
+    width: 100%;
 }
 
 .loseScreen {
@@ -115,7 +117,7 @@ footer {
 }
 
 button.play-again {
-    background-image: url("./img/again_btn.png");
+    background-image: url("../img/again_btn.png");
     background-color: transparent;
     display: block;
     padding: 5% 10%;
@@ -185,14 +187,14 @@ header .rl {
 }
 
 .tzbeximg {
-    background-image: url("./img/tzbex.png");
+    background-image: url("../img/tzbex.png");
     background-size: contain;
     height: 90%;
     width: 35%;
 }
 
 .premiumtzbeximg {
-    background-image: url("./img/premiumtzbex.png");
+    background-image: url("../img/premiumtzbex.png");
     background-size: contain;
     height: 90%;
     width: 35%;
@@ -211,13 +213,13 @@ header .rl {
 }
 
 .home-button {
-    background-image: url("./img/home_button.png");
+    background-image: url("../img/home_button.png");
     height: 100%;
     width: 10%;
 }
 
 .shop #home-button {
-    background-image: url("./img/home_button.png");
+    background-image: url("../img/home_button.png");
     box-shadow: inset 0 0 10px #111111;
     background-color: #acacac;
     background-size: 70%;
@@ -256,7 +258,7 @@ header .rl {
 /*objects*/
 
 .person {
-    background-image: url("./img/qyart2.png");
+    background-image: url("../img/qyart2.png");
     width: 15%;
     height: 15%;
     position: absolute;
@@ -268,21 +270,21 @@ header .rl {
     position: absolute;
     width: 17%;
     height: 10%;
-    background-image: url("./img/lada.png");
+    background-image: url("../img/lada.png");
 }
 
 #tzbex {
     position: absolute;
     width: 15%;
     height: 10%;
-    background-image: url("./img/tzbex.png");
+    background-image: url("../img/tzbex.png");
 }
 
 #bichok {
     position: absolute;
     width: 5%;
     height: 5%;
-    background-image: url("./img/sigaret.png");
+    background-image: url("../img/sigaret.png");
     transform: rotate(45deg);
 }
 
