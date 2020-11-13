@@ -127,10 +127,10 @@ p#qyart-lvl {
 
 .person {
     background-image: url("../img/qyart2.png");
-    width: 15%;
-    height: 15%;
     position: absolute;
+    height: 15%;
     bottom: 0%;
+    width: 15%;
     left: 0%;
 }
 

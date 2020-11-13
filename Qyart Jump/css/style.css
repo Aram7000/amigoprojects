@@ -258,7 +258,6 @@ header .rl {
 /*objects*/
 
 .person {
-    background-image: url("../img/qyart2.png");
     width: 15%;
     height: 15%;
     position: absolute;
@@ -375,6 +374,17 @@ header .rl {
 .shop-i .item-p {
     color: #00ffaa;
 }
+
+
+/* LOAD OBJECTS */
+
+.loadOBJ {
+    position: fixed;
+    left: 100vw;
+    top: 100vw;
+}
+
+
 
 /* ------------------------------------- REQUIRE ---------------------------------------------------------- */
 

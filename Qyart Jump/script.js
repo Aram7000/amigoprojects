@@ -65,7 +65,15 @@ window.addEventListener("load", () => {
         moxraman: document.querySelector('#moxraman'),
         progress: document.querySelector('#progress'),
         qyartlvl: document.querySelector("#qyart-lvl"),
+        loseScreen: document.querySelector(".loseScreen"),
+        loading: {
+            qyart: document.querySelector("#qyartLoad"),
+        }
     }
+
+    obj.loading.qyart.style.backgroundImage = "url('./img/anime-qyart-2.png')";
+    obj.qyart.style.backgroundImage = "url('./img/anime-qyart2.png')";
+
 
     let animation2_box;
     let animation2 = (object = obj.score[0], size = 5) => {
@@ -139,7 +147,7 @@ window.addEventListener("load", () => {
         obj.qyartlvl.innerHTML = qyartLvls[w1];
         oneRound.tzbex = 0;
         oneRound.prtz = 0;
-        
+
     }
 
     let scores = {
@@ -198,6 +206,10 @@ window.addEventListener("load", () => {
         scores.arr[3] = localStorage.getItem("premiumtzbex");
         scores.arr[5] = parseInt(localStorage.getItem("progress"));
         scores.ch(6);
+    }
+
+    if (localStorage.getItem("progress") == null) {
+        localStorage.setItem("progress", 0);
     }
 
 
@@ -381,9 +393,10 @@ window.addEventListener("load", () => {
         jumpStartPosition: 0,
         jump: () => {
             if (!play || qyart.double) {
-                qyart.speedY = 25;
+                obj.loseScreen.classList.remove("active");
                 qyart.jumping = true;
                 qyart.double = false;
+                qyart.speedY = 25;
             }
         },
         touchStart: (s) => {
@@ -450,7 +463,7 @@ window.addEventListener("load", () => {
     obj.progress.style.width = w2 + "%";
 
     setTimeout(() => {
-        document.querySelector(".loseScreen").classList.remove("active");
+        obj.loseScreen.classList.remove("active");
         document.querySelector("#NEON_loading").classList.add("fadeOut");
     }, 50);
 
