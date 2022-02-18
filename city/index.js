@@ -52,6 +52,7 @@ window.addEventListener("load", () => {
     let screen_side = screen.side.front;
     let screen_back = screen.side.back;
     screen_back.style.border = "10px solid #00668833";
+    screen_side.style.backgroundRepeat = "no-repeat";
     screen_side.style.backgroundSize = "contain";
     screen_side.style.backgroundPosition = "center";
     screen_side.style.backgroundImage = `url("./assets/img1.png")`;
